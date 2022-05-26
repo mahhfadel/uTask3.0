@@ -1,4 +1,8 @@
 /* GERAL ============================= */
+:root {
+	font-size: 62.5%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,25 +12,33 @@
 body {
 	font-family: 'DM Sans', sans-serif;
 	background: #fafafa;
+	font-size: 1.6rem;
 }
 
 /* NAVEGATION ==================== */
 header {
 	background: #226ed8;
-	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.3);
 
-	height: 80px;
+	height: 8rem;
 
 	display: flex;
-	justify-content: space-around;
+	align-items: center;
+}
+
+.alignHeader {
+	width: 100%;
+	margin-inline: 18rem;
+
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
 header h1 {
 	font-style: normal;
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 45px;
+	font-size: 3rem;
+	line-height: 4.5rem;
 
 	color: #fafafa;
 }
@@ -43,54 +55,59 @@ header h1 {
 
 .onoff input.toggle + label {
 	display: inline-block;
-	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.3);
 	position: absolute;
-	width: 50px;
-	height: 24px;
-	border-radius: 50px;
+	width: 5rem;
+	height: 2.4rem;
+	border-radius: 5rem;
 	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
 }
 
 .onoff input.toggle + label:before {
 	display: block;
-	width: 50px;
-	height: 24px;
-	border-radius: 50px;
+	width: 5rem;
+	height: 2.4rem;
+	border-radius: 5rem;
 	transition: 0.1s ease-in-out;
 }
 
 .onoff input.toggle + label:after {
 	content: '';
 	position: absolute;
-	height: 20px;
-	width: 20px;
-	top: 1.2px;
-	left: 2px;
+	height: 2rem;
+	width: 2rem;
+	top: 0.12rem;
+	left: 0.2rem;
 	border-radius: 50px;
 	background: #ffffff;
 	background-image: url(/assets/light_mode.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 	transition: 0.1s ease-in-out;
 }
 
 .onoff input.toggle:checked + label:before {
-	width: 100px;
+	width: 10rem;
 	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
 }
 
 .onoff input.toggle:checked + label:after {
-	left: 28px;
+	left: 2.8rem;
+}
+
+main {
+	margin-top: 3.5rem;
+	margin-left: 18rem;
 }
 
 /* Frase do dia */
 .fraseDoDia {
-	margin-top: 35px;
-	margin-left: 140px;
-	width: 620px;
-	height: 119px;
+	width: 62rem;
+	height: 11.9rem;
 
 	background: #ffffff;
-	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
-	border-radius: 20px;
+	box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.04);
+	border-radius: 2rem;
 
 	display: flex;
 	align-items: flex-start;
@@ -99,10 +116,22 @@ header h1 {
 }
 
 /* bolinha */
+.bollFraseFora {
+	width: 3.8rem;
+	height: 3.8rem;
+	border-radius: 3.8rem;
+	margin-right: 1rem;
+
+	background: #fffcee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .bollFrase {
-	width: 35px;
-	height: 35px;
-	border-radius: 35px;
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 3.2rem;
 
 	background: #fff5c0;
 	display: flex;
@@ -113,17 +142,39 @@ header h1 {
 	margin-inline: auto;
 }
 
+.tituloFrase {
+	color: #141414;
+
+	font-weight: 900;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+
+.textoFrase {
+	color: #141414;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+}
+
 /* Roda pé */
 footer {
 	background-color: #226ed8;
-	height: 50px;
+	height: 5rem;
 
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
 	color: #ffffff;
 
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+}
+
+.rodape {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	margin-inline: 18rem;
 }

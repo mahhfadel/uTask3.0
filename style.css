@@ -1,0 +1,129 @@
+/* GERAL ============================= */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'DM Sans', sans-serif;
+	background: #fafafa;
+}
+
+/* NAVEGATION ==================== */
+header {
+	background: #226ed8;
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+
+	height: 80px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 45px;
+
+	color: #fafafa;
+}
+
+/* Botao switch */
+.onoff {
+	display: flex;
+	align-items: center;
+}
+
+.onoff input.toggle {
+	display: none;
+}
+
+.onoff input.toggle + label {
+	display: inline-block;
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	width: 50px;
+	height: 24px;
+	border-radius: 50px;
+	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
+}
+
+.onoff input.toggle + label:before {
+	display: block;
+	width: 50px;
+	height: 24px;
+	border-radius: 50px;
+	transition: 0.1s ease-in-out;
+}
+
+.onoff input.toggle + label:after {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	top: 1.2px;
+	left: 2px;
+	border-radius: 50px;
+	background: #ffffff;
+	background-image: url(/assets/light_mode.svg);
+	transition: 0.1s ease-in-out;
+}
+
+.onoff input.toggle:checked + label:before {
+	width: 100px;
+	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
+}
+
+.onoff input.toggle:checked + label:after {
+	left: 28px;
+}
+
+/* Frase do dia */
+.fraseDoDia {
+	margin-top: 35px;
+	margin-left: 140px;
+	width: 620px;
+	height: 119px;
+
+	background: #ffffff;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+	border-radius: 20px;
+
+	display: flex;
+	align-items: flex-start;
+
+	padding: 1.6rem;
+}
+
+/* bolinha */
+.bollFrase {
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+
+	background: #fff5c0;
+	display: flex;
+	align-items: center;
+}
+
+.bollFrase img {
+	margin-inline: auto;
+}
+
+/* Roda pé */
+footer {
+	background-color: #226ed8;
+	height: 50px;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	color: #ffffff;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}

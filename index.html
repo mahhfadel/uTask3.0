@@ -3,9 +3,17 @@
 <html lang="pt_br">
 	<head>
 		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Projeto desenvolvido para o processo de trainee da Unect Jr. 2022.1"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Maria Clara Fadel" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/style.css" />
+
+		<!-- Titulo -->
 		<title>uTask 3.0</title>
 
 		<!-- Icon navegador -->
@@ -19,7 +27,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -40,10 +48,20 @@
 					<h1>uTask 3.0</h1>
 				</div>
 
-				<!-- botão -->
-				<div class="onoff">
-					<input type="checkbox" class="toggle" id="onoff1" />
-					<label for="onoff1"> </label>
+				<!-- Switch button -->
+				<div class="onoffswitch">
+					<input
+						type="checkbox"
+						name="onoffswitch"
+						class="onoffswitch-checkbox"
+						id="myonoffswitch"
+						tabindex="0"
+						checked
+					/>
+					<label
+						class="onoffswitch-label"
+						for="myonoffswitch"
+					></label>
 				</div>
 			</div>
 		</header>
@@ -52,62 +70,52 @@
 		<main>
 			<div class="fraseDoDia">
 				<div class="bollFraseFora">
-					<div class="bollFrase">
-						<img
-							src="/assets/tips_and_updates_light.svg"
-							alt="lampada com duas estrelas"
-						/>
-					</div>
+					<div class="bollFrase"></div>
 				</div>
 
 				<div class="frase">
 					<div class="tituloFrase">Frase do dia</div>
-
-					<div class="textoFrase">
-						Se você quer um pedacinho do paraíso, acredite em Deus.
-						Mas se você quer conquistar o mundo, acredite em você
-						porque Deus já te deu tudo o que você precisa para você
-						vencer.
-					</div>
 				</div>
 			</div>
 
 			<!-- Tasks -->
 			<section>
 				<div>
-					<h5>A fazer</h5>
+					<div class="topo">
+						<h5>A fazer</h5>
+						<div class="add"></div>
+					</div>
+					<div class="task">
+						Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry. Lorem Ipsum has been the
+						industry's standard dummy text ever since the 1500s,
+						when an unknown printer took a galley of type and
+						scrambled it to make a type specimen book. It has
+						survived not only five centuries, but also the leap into
+						electronic typesetting, remaining essentially unchanged.
+						It was popularised in the 1960s with the release of
+						Letraset sheets containing Lorem Ipsum passages, and
+						more recently with desktop publishing software like
+						Aldus PageMaker including versions of Lorem Ipsum.
+					</div>
+				</div>
+
+				<!-- <div>
+					<div class="topo">
+						<h5>Em andamento</h5>
+						<div class="add"></div>
+					</div>
 					<div class="task"></div>
 				</div>
 
 				<div>
-					<h5>Em andamento</h5>
+					<div class="topo">
+						<h5>Feito</h5>
+						<div class="add"></div>
+					</div>
 					<div class="task"></div>
-				</div>
-
-				<div>
-					<h5>Feito</h5>
-					<div class="task"></div>
-				</div>
+				</div> -->
 			</section>
-			<!-- Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você
-			quer conquistar o mundo, acredite em você porque Deus já te deu tudo
-			o que você precisa para você vencer.Se você quer um pedacinho do
-			paraíso, acredite em Deus. Mas se você quer conquistar o mundo,
-			acredite em você porque Deus já te deu tudo o que você precisa para
-			você vencer.Se você quer um pedacinho do paraíso, acredite em Deus.
-			Mas se você quer conquistar o mundo, acredite em você porque Deus já
-			te deu tudo o que você precisa para você vencer.Se você quer um
-			pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar
-			o mundo, acredite em você porque Deus já te deu tudo o que você
-			precisa para você vencer.Se você quer um pedacinho do paraíso,
-			acredite em Deus. Mas se você quer conquistar o mundo, acredite em
-			você porque Deus já te deu tudo o que você precisa para você
-			vencer.Se você quer um pedacinho do paraíso, acredite em Deus. Mas
-			se você quer conquistar o mundo, acredite em você porque Deus já te
-			deu tudo o que você precisa para você vencer.Se você quer um
-			pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar
-			o mundo, acredite em você porque Deus já te deu tudo o que você
-			precisa para você vencer. -->
 		</main>
 
 		<!-- Roda pé -->

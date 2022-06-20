@@ -32,10 +32,10 @@
 		/>
 	</head>
 
-	<body>
+	<body id="window">
 		<!-- header -->
 		<header>
-			<div class="alignHeader">
+			<div class="container">
 				<div>
 					<img
 						src="/assets/logo_white.svg"
@@ -66,65 +66,108 @@
 			</div>
 		</header>
 
-		<!-- Frase do dia -->
 		<main>
-			<div class="fraseDoDia">
-				<div class="bollFraseFora">
+			<div class="container">
+				<!-- Frase do dia -->
+				<div class="containerFraseDoDia">
 					<div class="bollFrase"></div>
+
+					<div class="content">
+						<div class="tituloFrase">Frase do dia</div>
+						<div class="frase">
+							<p>
+								Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.
+							</p>
+						</div>
+					</div>
 				</div>
 
-				<div class="frase">
-					<div class="tituloFrase">Frase do dia</div>
+				<div class="modalBack" id="modal-frase">
+					<div class="modalContainer">
+						<div class="modalFraseTopo">
+							<div>
+								<div class="modalBollFrase"></div>
+								<div class="modalTituloFrase">Frase do dia</div>
+							</div>
+
+							<div class="close"></div>
+						</div>
+
+						<div class="modalFrase">
+							<p>
+								Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.
+							</p>
+						</div>
+
+					</div>
 				</div>
+
+				<!-- Tasks -->
+				<section>
+					<div>
+						<div class="topo">
+							<h5>A fazer</h5>
+							<div class="addButton"></div>
+						</div>
+						<div class="task">
+							
+						</div>
+					</div>
+
+					<div>
+						<div class="topo">
+							<h5>Em andamento</h5>
+						</div>
+						<div class="task">
+						</div>
+					</div>
+
+					<div>
+						<div class="topo">
+							<h5>Feito</h5>
+						</div>
+						<div class="task">
+						</div>
+					</div>
+					
+				</section>
+
+				<div class="modalBack" id="modal-add">
+					<div class="modalContainer">
+						<div class="modalAdd">
+							<div class="modalAddTopo">
+								<h3>Nova Task</h3>
+								<div class="linha"></div>
+							</div>
+
+							<div class="close"></div>
+
+							<form>
+								<h6>Titulo*</h6>
+								<input type="text" class="inputTitulo">
+
+								<h6>Descrição</h6>
+								<input type="text" class="inputDescricao">
+
+								<input type="button" class="button" value="Criar Task">
+							</form>
+						</div>
+					</div>
+				</div>
+
 			</div>
-
-			<!-- Tasks -->
-			<section>
-				<div>
-					<div class="topo">
-						<h5>A fazer</h5>
-						<div class="add"></div>
-					</div>
-					<div class="task">
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the
-						industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and
-						scrambled it to make a type specimen book. It has
-						survived not only five centuries, but also the leap into
-						electronic typesetting, remaining essentially unchanged.
-						It was popularised in the 1960s with the release of
-						Letraset sheets containing Lorem Ipsum passages, and
-						more recently with desktop publishing software like
-						Aldus PageMaker including versions of Lorem Ipsum.
-					</div>
-				</div>
-
-				<!-- <div>
-					<div class="topo">
-						<h5>Em andamento</h5>
-						<div class="add"></div>
-					</div>
-					<div class="task"></div>
-				</div>
-
-				<div>
-					<div class="topo">
-						<h5>Feito</h5>
-						<div class="add"></div>
-					</div>
-					<div class="task"></div>
-				</div> -->
-			</section>
 		</main>
 
 		<!-- Roda pé -->
 		<footer>
-			<div class="rodape">
+			<div class="container">
 				<div>© Processo de Trainee <b>Unect Jr.</b> 2022.1</div>
 
 				<div>Feito com 🤍 por <b>Maria Clara Fadel</b></div>
 			</div>
 		</footer>
+
+		<script src="/modal.js"></script>
+		<script src="/consumoApi.js"></script>
 	</body>
 </html>

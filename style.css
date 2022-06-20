@@ -17,6 +17,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
+	min-width: 30rem;
 }
 
 /* NAVEGATION ==================== */
@@ -31,9 +32,10 @@ header {
 	align-items: center;
 }
 
-.alignHeader {
-	width: 100%;
-	margin-inline: 15%;
+header .container {
+	width: 85%;
+	max-width: 98rem;
+	margin: auto;
 
 	display: flex;
 	justify-content: space-between;
@@ -109,37 +111,31 @@ header h1 {
 
 /* MAIN */
 main {
-	/* background: red; */
-	margin: 2% 15%;
+	width: 100%;
+	height: 100%;
+}
+
+main .container{
+	width: 85%;
+	max-width: 98rem;
+	margin: auto;
+	
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 /* Frase do dia */
-.fraseDoDia {
-	width: 100%;
-	margin-top: 1rem;
-
-	background: #ffd569;
+.containerFraseDoDia{
+	background: #FFD569;
 	box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.04);
 	border-radius: 2rem;
 
 	display: flex;
 	align-items: center;
+	padding: 1.3rem;
+	padding-left: 3rem;
 
-	padding: 1.4rem;
-	padding-left: 2.2rem;
-}
-
-/* bolinha */
-.bollFraseFora {
-	width: 4rem;
-	height: 4rem;
-	border-radius: 4rem;
-	margin-right: 1.2rem;
-
-	background: #fffcee;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	cursor: pointer;
 }
 
 .bollFrase {
@@ -148,29 +144,159 @@ main {
 	border-radius: 3.2rem;
 
 	background: #fff5c0;
-	display: flex;
-	align-items: center;
+	box-shadow: 0 0 0 5px #fffcee;
 	background-image: url(/assets/tips_and_updates_light.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	position: absolute;
 }
 
-.tituloFrase {
-	color: #ffffff;
+.content{
+	margin-left: 1.5rem;
+}
+
+.tituloFrase{
+	color: #FFFFFF;
 	text-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.25);
 
-	font-style: normal;
 	font-weight: 600;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
-	letter-spacing: -0.017em;
+}
+
+.frase{
+	display: none;
+}
+
+@media(min-width:777px){
+	.containerFraseDoDia{
+		background: #ffffff;
+		display: flex;
+		align-items: flex-start;
+
+		cursor: default;
+	}
+
+	.tituloFrase{
+		color: #141414;
+		text-shadow: none;
+	}
+
+	.frase{
+		display: flex;
+	}
+}
+
+/* Modal */
+.modalBack{
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+
+	background: rgb(0,0,0,.5);
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalBack.mostrar{
+	display: flex;
+}
+
+@keyframes modal {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.mostrar .modalContainer{
+	animation: modal .3s;
+}
+
+.modalContainer {
+	background: #FFFFFF;
+	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.25);
+	border-radius: 2rem;
+
+	padding: 4rem;
+
+	width: 60%;
+	min-width: 315px;
+}
+
+.modalFraseTopo{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 1rem;
+	
+}
+
+.modalFraseTopo div{
+	display: flex;
+	align-items: center;
+}
+
+.modalBollFrase {
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 3.2rem;
+
+	background: #fff5c0;
+	box-shadow: 0 0 0 5px #fffcee;
+	background-image: url(/assets/tips_and_updates_light.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.modalTituloFrase{
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+
+	margin-left: 1rem;
+}
+
+.close {
+	border: 0.2rem solid #226ed8;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 3rem;
+
+	background-image: url(/assets/close_light.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	cursor: pointer;
+}
+
+.modalFrase{
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+
+	color: #141414;
 }
 
 /* Tasks */
 section {
 	width: 100%;
+	height: 100%;
+	
 	margin-top: 2.5rem;
+	margin-bottom: 7.0rem;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
 }
 
 section h5 {
@@ -190,7 +316,7 @@ section div {
 	justify-content: space-between;
 }
 
-.add {
+.addButton {
 	border: 0.2rem solid #226ed8;
 	width: 3rem;
 	height: 3rem;
@@ -199,10 +325,12 @@ section div {
 	background-image: url(/assets/add_light.svg);
 	background-repeat: no-repeat;
 	background-position: center;
+
+	cursor: pointer;
 }
 
 .task {
-	height: 28rem;
+	height: 25rem;
 	margin-top: 0.8rem;
 	padding: 2rem;
 
@@ -221,15 +349,80 @@ section div {
 	border-radius: 10px;
 }
 
+/* modal */
+.modalAdd{
+	position: relative;
+}
+
+.modalAddTopo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modalAddTopo h3{
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 3rem;
+	color: #226ED8;
+}
+
+.modalAddTopo .linha{
+	height: 0.3rem;
+	width: 12.1rem;
+	background: #226ED8;
+	border-radius: 1rem;
+}
+
+.modalAdd .close{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.modalAdd form{
+	display: flex;
+	flex-direction: column;
+}
+
+.modalAdd h6{
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+	margin-top: 2rem;
+}
+
+.modalAdd .inputTitulo{
+	height: 4rem;
+	background: #EEEEEE;
+	border-radius: 10px;
+	border: 0 none;
+}
+
+.modalAdd .inputDescricao{
+	height: 9rem;
+	background: #EEEEEE;
+	border-radius: 10px;
+	border: 0 none;
+}
+
+.modalAdd .button{
+	margin-top: 4rem;
+	padding: 1.5rem;
+
+	background: #226ED8;
+	color: #FFFFFF;
+	border-radius: 20px;
+	border: 0 none;
+
+	cursor: pointer;
+}
+
 /* Roda pé */
 footer {
 	background-color: #226ed8;
-	height: 7rem;
+	height: 5rem;
 	width: 100%;
-
-	font-size: 1.4rem;
-	line-height: 2.1rem;
-	color: #ffffff;
 
 	display: flex;
 	align-items: center;
@@ -239,8 +432,20 @@ footer {
 	left: 0;
 }
 
-.rodape {
-	width: 100%;
+footer .container {
+	width: 85%;
+	max-width: 98rem;
+	margin: auto;
 
-	margin-inline: 15%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+	color: #ffffff;
+}
+
+footer .container div{
+	padding-right: 1.6rem;
 }

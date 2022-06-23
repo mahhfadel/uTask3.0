@@ -250,12 +250,19 @@
 
 							<div class="close"></div>
 
-							<form>
-								<label for="formTitulo">Titulo*</label>
-								<input type="text" class="inputTitulo" id="formTitulo" required>
+							<form class="form" id="form">
+								<div class="form-control">
+									<label for="formTitulo">Titulo*</label>
+									<input type="text" class="inputTitulo error" id="formTitulo">
 
-								<label for="formDescricao">Descrição</label>
-								<textarea name="formDescricao" id="formDescricao"></textarea>
+									<i><img class="img-error" src="/assets/error-icon.svg" alt=""></i>
+									<small>Preencha esse campo</small>
+								</div>
+
+								<div class="form-control">
+									<label for="formDescricao">Descrição</label>
+									<textarea name="formDescricao" id="formDescricao"></textarea>
+								</div>
 
 								<button>Criar Task</button>
 							</form>
@@ -276,6 +283,6 @@
 		</footer>
 
 		<script src="/modal.js"></script>
-		<!-- <script src="/consumoApi.js"></script> -->
+		<script src="validacao.js"></script>
 	</body>
 </html>

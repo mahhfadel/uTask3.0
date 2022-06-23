@@ -382,7 +382,7 @@ section h5 {
 	right: 0;
 }
 
-.modalAdd form{
+.modalAdd .form-control{
 	display: flex;
 	flex-direction: column;
 }
@@ -399,13 +399,36 @@ section h5 {
 	padding: 1rem;
 	background: #EEEEEE;
 	border-radius: 10px;
-	border: 1 solid #eeeeee;
-
+	border: none;
 	outline: none;
 }
 
-input:invalid{
-	border-color: red;
+.form-control.error input{
+	border: 0.1rem solid #DB5A5A;
+}
+
+.form-control.error i .img-error{
+	visibility: visible;
+}
+
+.form-control.error small{
+	visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 8.5rem;
+    right: 1rem;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 8.2rem;
+    font-size: 1.2rem;
+	color: #DB5A5A;
+
 }
 
 .modalAdd textarea{
@@ -421,6 +444,7 @@ input:invalid{
 .modalAdd button{
 	margin-top: 4rem;
 	padding: 1.5rem;
+	width: 100%;
 
 	background: #226ED8;
 

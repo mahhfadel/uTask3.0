@@ -104,29 +104,137 @@
 
 				<!-- Tasks -->
 				<section>
-					<div>
+					<div class="secoes">
 						<div class="topo">
 							<h5>A fazer</h5>
 							<div class="addButton"></div>
 						</div>
 						<div class="task">
-							
+							<div class="tasksBox">
+								<div class="topTasks">
+									<div class="tasksTitulo">Titulo</div>
+
+									<div class="button_more">
+										<div class="dropdown">
+											<button class="dropbtn">
+												<img src="/assets/more_vert_light.svg">
+											</button>
+											
+											<div class="dropdown-content">
+												<button>
+													<div class="deleteIcon"></div>
+													<div class="excluir">Excluir</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="bottomTasks">
+									<div class="collapsibleOut">
+										<button type="button" class="collapsible">
+										Descrição 
+										</button>
+										<div class="contentDescricao" style="display: none;">
+											<p>Descrição Aqui</p>
+										</div>
+									</div>
+									
+
+									<div class="tasksAction">
+										<div class="next"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div>
+					<div class="secoes">
 						<div class="topo">
 							<h5>Em andamento</h5>
 						</div>
 						<div class="task">
+							<div class="tasksBox">
+								<div class="topTasks">
+									<div class="tasksTitulo">Titulo</div>
+
+									<div class="button_more">
+										<div class="dropdown">
+											<button class="dropbtn">
+												<img src="/assets/more_vert_light.svg">
+											</button>
+											
+											<div class="dropdown-content">
+												<button>
+													<div class="deleteIcon"></div>
+													<div class="excluir">Excluir</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="bottomTasks">
+									<div class="collapsibleOut">
+										<button type="button" class="collapsible">
+										Descrição 
+										</button>
+										<div class="contentDescricao" style="display: none;">
+											<p>Descrição Aqui</p>
+										</div>
+									</div>
+									
+
+									<div class="tasksAction">
+										<div class="before"></div>
+										<div class="next"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div>
+					<div class="secoes">
 						<div class="topo">
 							<h5>Feito</h5>
 						</div>
 						<div class="task">
+							<div class="tasksBox">
+								<div class="topTasks">
+									<div class="tasksTitulo"><s>Titulo</s></div>
+
+									<div class="button_more">
+										<div class="dropdown">
+											<button class="dropbtn">
+												<img src="/assets/more_vert_light.svg">
+											</button>
+											
+											<div class="dropdown-content">
+												<button>
+													<div class="deleteIcon"></div>
+													<div class="excluir">Excluir</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottomTasks">
+									<div class="collapsibleOut">
+										<button type="button" class="collapsible">
+										Descrição 
+										</button>
+										<div class="contentDescricao" style="display: none;">
+											<p>Descrição Aqui</p>
+										</div>
+									</div>
+									
+
+									<div class="tasksAction">
+										<div class="before"></div>
+										<div class="replay"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					
@@ -143,13 +251,13 @@
 							<div class="close"></div>
 
 							<form>
-								<h6>Titulo*</h6>
-								<input type="text" class="inputTitulo">
+								<label for="formTitulo">Titulo*</label>
+								<input type="text" class="inputTitulo" id="formTitulo" required>
 
-								<h6>Descrição</h6>
-								<input type="text" class="inputDescricao">
+								<label for="formDescricao">Descrição</label>
+								<textarea name="formDescricao" id="formDescricao"></textarea>
 
-								<input type="button" class="button" value="Criar Task">
+								<button>Criar Task</button>
 							</form>
 						</div>
 					</div>
@@ -168,6 +276,6 @@
 		</footer>
 
 		<script src="/modal.js"></script>
-		<script src="/consumoApi.js"></script>
+		<!-- <script src="/consumoApi.js"></script> -->
 	</body>
 </html>

@@ -9,14 +9,21 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	position: absolute;
+}
+
 body {
-	font-family: 'DM Sans', sans-serif;
+	height: 100%;
+
 	font-family: 'Poppins', sans-serif;
 	background: #fafafa;
 	font-size: 1.6rem;
 
-	display: flex;
-	flex-direction: column;
 	min-width: 30rem;
 }
 
@@ -36,6 +43,7 @@ header .container {
 	width: 85%;
 	max-width: 98rem;
 	margin: auto;
+	height: 8rem;
 
 	display: flex;
 	justify-content: space-between;
@@ -115,18 +123,20 @@ main {
 	height: 100%;
 }
 
-main .container{
+main .container {
 	width: 85%;
+	height: 100%;
 	max-width: 98rem;
 	margin: auto;
-	
-	margin-top: 3rem;
+
 	margin-bottom: 3rem;
+
+	padding-top: 3.2rem;
 }
 
 /* Frase do dia */
-.containerFraseDoDia{
-	background: #FFD569;
+.containerFraseDoDia {
+	background: #ffd569;
 	box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.04);
 	border-radius: 2rem;
 
@@ -150,12 +160,12 @@ main .container{
 	background-position: center;
 }
 
-.content{
+.content {
 	margin-left: 1.5rem;
 }
 
-.tituloFrase{
-	color: #FFFFFF;
+.tituloFrase {
+	color: #ffffff;
 	text-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.25);
 
 	font-weight: 600;
@@ -163,12 +173,12 @@ main .container{
 	line-height: 2.4rem;
 }
 
-.frase{
+.frase {
 	display: none;
 }
 
-@media(min-width:777px){
-	.containerFraseDoDia{
+@media (min-width: 777px) {
+	.containerFraseDoDia {
 		background: #ffffff;
 		display: flex;
 		align-items: flex-start;
@@ -177,71 +187,93 @@ main .container{
 		pointer-events: none;
 	}
 
-	.tituloFrase{
+	.tituloFrase {
 		color: #141414;
 		text-shadow: none;
 	}
 
-	.frase{
+	.frase {
 		display: flex;
+	}
+
+	.slide {
+		padding-bottom: 31.5rem !important;
+		width: 100% !important;
+	}
+
+	.slides {
+		display: flex;
+		gap: 2rem;
+		width: 100% !important;
+	}
+
+	.secoes {
+		margin-left: 0 !important;
+	}
+
+	.btn {
+		display: none;
+	}
+
+	.balls {
+		display: none !important;
 	}
 }
 
 /* Modal */
-.modalBack{
+.modalBack {
 	width: 100%;
 	height: 100%;
-	
+
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 2000;
 
-	background: rgb(0,0,0,.5);
+	background: rgb(0, 0, 0, 0.5);
 
 	display: none;
 	justify-content: center;
 	align-items: center;
 }
 
-.modalBack.mostrar{
+.modalBack.mostrar {
 	display: flex;
 }
 
 @keyframes modal {
-	from{
+	from {
 		opacity: 0;
 	}
-	to{
+	to {
 		opacity: 1;
 	}
 }
 
-.mostrar .modalContainer{
-	animation: modal .3s;
+.mostrar .modalContainer {
+	animation: modal 0.3s;
 }
 
 .modalContainer {
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.25);
 	border-radius: 2rem;
 
-	padding: 4rem;
+	padding: 3rem;
 
 	width: 60%;
 	min-width: 315px;
 }
 
-.modalFraseTopo{
+.modalFraseTopo {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	margin-bottom: 1rem;
-	
 }
 
-.modalFraseTopo div{
+.modalFraseTopo div {
 	display: flex;
 	align-items: center;
 }
@@ -258,7 +290,7 @@ main .container{
 	background-position: center;
 }
 
-.modalTituloFrase{
+.modalTituloFrase {
 	font-weight: 700;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
@@ -279,7 +311,7 @@ main .container{
 	cursor: pointer;
 }
 
-.modalFrase{
+.modalFrase {
 	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 2.1rem;
@@ -288,27 +320,92 @@ main .container{
 }
 
 /* Tasks */
-section {
-	width: 100%;
+.viewSlide {
 	height: 100%;
-	
-	margin-top: 2.5rem;
-	margin-bottom: 7.0rem;
-
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-	gap: 3rem;
+	overflow: hidden;
 }
 
-section h5 {
+.slide {
+	width: 300%;
+	height: 100%;
+	padding-bottom: 30rem;
+	overflow: hidden;
+	transition: all 0.4s;
+}
+
+.slides {
+	height: 100%;
+	width: 100%;
+
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+
+	display: flex;
+	gap: 0.9rem;
+}
+
+.slides h5 {
 	font-weight: 400;
 	font-size: 2rem;
 	line-height: 3rem;
 	color: #141414;
 }
 
+#atual {
+	transition: all 2s;
+}
+
+.btn {
+	position: absolute;
+	padding: 1.5rem;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-top: -0.5rem;
+}
+
+.btn:hover {
+	transform: scale(1.5);
+}
+
+#before {
+	top: 60%;
+	left: 0;
+}
+
+#next {
+	top: 60%;
+	right: 0;
+}
+
+.balls {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	margin-top: 2.5rem;
+	margin-left: 33.33%;
+}
+
+.balls div {
+	transition: all 0.5s;
+	background: #c4c4c4;
+	padding: 0.6rem;
+	margin: 0.7rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.balls div:hover {
+	border: 0.1rem solid #226ed8;
+}
+
+.divAtual {
+	transition: all 0.5s !important;
+	background: #226ed8 !important;
+}
+
 .secoes {
-	width: 100%;
+	width: 100vw;
+	height: 100%;
 }
 
 .topo {
@@ -330,8 +427,30 @@ section h5 {
 	cursor: pointer;
 }
 
+.navigate_next {
+	width: 3rem;
+	height: 3rem;
+
+	background-image: url(/assets/navigate_next_carrossel.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	cursor: pointer;
+}
+
+.navigate_before {
+	width: 3rem;
+	height: 3rem;
+
+	background-image: url(/assets/navigate_before_carrossel.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	cursor: pointer;
+}
+
 .task {
-	height: 25rem;
+	height: 100%;
 	margin-top: 0.8rem;
 	padding-inline: 1.5rem;
 	padding-bottom: 1.5rem;
@@ -352,103 +471,102 @@ section h5 {
 }
 
 /* modal */
-.modalAdd{
+.modalAdd {
 	position: relative;
 }
 
-.modalAddTopo{
+.modalAddTopo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.modalAddTopo h3{
+.modalAddTopo h3 {
 	font-weight: 600;
 	font-size: 2rem;
 	line-height: 3rem;
-	color: #226ED8;
+	color: #226ed8;
 }
 
-.modalAddTopo .linha{
+.modalAddTopo .linha {
 	height: 0.3rem;
 	width: 12.1rem;
-	background: #226ED8;
+	background: #226ed8;
 	border-radius: 1rem;
 }
 
-.modalAdd .close{
+.modalAdd .close {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
-.modalAdd .form-control{
+.modalAdd .form-control {
 	display: flex;
 	flex-direction: column;
 }
 
-.modalAdd label{
+.modalAdd label {
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 2.1rem;
 	margin-top: 2rem;
 }
 
-.modalAdd input{
+.modalAdd input {
 	height: 4rem;
 	padding: 1rem;
-	background: #EEEEEE;
+	background: #eeeeee;
 	border-radius: 10px;
 	border: none;
 	outline: none;
 }
 
-.form-control.error input{
-	border: 0.1rem solid #DB5A5A;
+.form-control.error input {
+	border: 0.1rem solid #db5a5a;
 }
 
-.form-control.error i .img-error{
+.form-control.error i .img-error {
 	visibility: visible;
 }
 
-.form-control.error small{
+.form-control.error small {
 	visibility: visible;
 }
 
 .form-control i {
-    position: absolute;
-    top: 8.5rem;
-    right: 1rem;
-    visibility: hidden;
+	position: absolute;
+	top: 8.5rem;
+	right: 1rem;
+	visibility: hidden;
 }
 
 .form-control small {
-    visibility: hidden;
-    position: absolute;
-    margin-top: 8.2rem;
-    font-size: 1.2rem;
-	color: #DB5A5A;
-
+	visibility: hidden;
+	position: absolute;
+	margin-top: 8.2rem;
+	font-size: 1.2rem;
+	color: #db5a5a;
 }
 
-.modalAdd textarea{
+.modalAdd textarea {
 	height: 8rem;
 	padding: 1rem;
-	background: #EEEEEE;
+	background: #eeeeee;
 	border-radius: 10px;
 	border: 0 none;
 
 	outline: none;
 }
 
-.modalAdd button{
+.modalAdd button {
 	margin-top: 4rem;
 	padding: 1.5rem;
 	width: 100%;
 
-	background: #226ED8;
+	background: #226ed8;
 
-	color: #FFFFFF;
+	color: #ffffff;
 	font-weight: 500;
 	font-size: 1.4rem;
 	line-height: 2.1rem;
@@ -461,7 +579,6 @@ section h5 {
 
 .tasksBox {
 	width: 100%;
-	/* height: 8rem; */
 
 	margin-top: 1.5rem;
 	padding: 1.3rem;
@@ -475,8 +592,7 @@ section h5 {
 	position: relative;
 }
 
-
-.tasksTitulo{
+.tasksTitulo {
 	font-weight: 600;
 	font-size: 1.6rem;
 	line-height: 2.1rem;
@@ -490,7 +606,7 @@ section h5 {
 	padding-right: 1rem;
 	margin-top: 0.5rem;
 	border: none;
-	
+
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
@@ -504,14 +620,14 @@ section h5 {
 	cursor: pointer;
 }
 
-.collapsible.active{
-	color: #002D6C;
+.collapsible.active {
+	color: #002d6c;
 	background: none;
 
 	padding-right: 1rem;
 	margin-top: 0.5rem;
 	border: none;
-	
+
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
@@ -526,13 +642,13 @@ section h5 {
 }
 
 .contentDescricao {
-    padding: 0.3rem 0;
-    display: none;
-    overflow: hidden;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    color: #000000;
+	padding: 0.3rem 0;
+	display: none;
+	overflow: hidden;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	color: #000000;
 }
 
 .collapsibleOut {
@@ -547,11 +663,11 @@ section h5 {
 	width: 100%;
 }
 
-.tasksAction{
+.tasksAction {
 	display: flex;
 }
 
-.next{
+.next {
 	/* border: 0.2rem solid #226ed8; */
 	background: #226ed8;
 	width: 2rem;
@@ -565,7 +681,7 @@ section h5 {
 	cursor: pointer;
 }
 
-.before{
+.before {
 	border: 0.15rem solid #226ed8;
 	/* background: #226ed8; */
 	width: 2rem;
@@ -581,7 +697,7 @@ section h5 {
 	cursor: pointer;
 }
 
-.replay{
+.replay {
 	/* border: 0.2rem solid #226ed8; */
 	background: #226ed8;
 	width: 2rem;
@@ -597,7 +713,7 @@ section h5 {
 	cursor: pointer;
 }
 
-.deleteIcon{
+.deleteIcon {
 	width: 1.6rem;
 	height: 1.6rem;
 
@@ -606,15 +722,15 @@ section h5 {
 	background-position: center;
 }
 
-.excluir{
+.excluir {
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
-	color: #DF0000;
+	color: #df0000;
 	margin-left: 0.2rem;
 }
 
-.topTasks{
+.topTasks {
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -634,20 +750,21 @@ section h5 {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	right: 0;
+	right: 1rem;
+	top: 3.3rem;
 	z-index: 1;
 }
 
-.dropdown-content button{
-  	display: flex;
-  	align-items: center;
-  	background-color: #ffffff;
-  	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+.dropdown-content button {
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 0.4rem;
-  	border: none;
-  	cursor: pointer;
+	border: none;
+	cursor: pointer;
 
-	padding: 0.3rem;
+	padding: 0.5rem;
 }
 
 .dropdown:hover .dropdown-content {
@@ -682,6 +799,6 @@ footer .container {
 	color: #ffffff;
 }
 
-footer .container div{
+footer .container div {
 	padding-right: 1.6rem;
 }

@@ -75,9 +75,7 @@
 					<div class="content">
 						<div class="tituloFrase">Frase do dia</div>
 						<div class="frase">
-							<p>
-								Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.
-							</p>
+							<p class="apiFrase"></p>
 						</div>
 					</div>
 				</div>
@@ -94,151 +92,212 @@
 						</div>
 
 						<div class="modalFrase">
-							<p>
-								Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.
-							</p>
+							<p class="apiFrase"></p>
 						</div>
-
 					</div>
 				</div>
 
 				<!-- Tasks -->
-				<section>
-					<div class="secoes">
-						<div class="topo">
-							<h5>A fazer</h5>
-							<div class="addButton"></div>
-						</div>
-						<div class="task">
-							<div class="tasksBox">
-								<div class="topTasks">
-									<div class="tasksTitulo">Titulo</div>
+				<div class="viewSlide">
+					<div class="slide">
+						<div class="slides">
+							<div id="before" class="btn">
+								<div class="navigate_before"></div>
+							</div>
+							<div id="next" class="btn">
+								<div class="navigate_next"></div>
+							</div>
 
-									<div class="button_more">
-										<div class="dropdown">
-											<button class="dropbtn">
-												<img src="/assets/more_vert_light.svg">
-											</button>
-											
-											<div class="dropdown-content">
-												<button>
-													<div class="deleteIcon"></div>
-													<div class="excluir">Excluir</div>
+							<!-- SECOES -------------------------------------- -->
+							<div id="atual" class="secoes">
+								<div class="topo">
+									<h5>A fazer</h5>
+									<div class="addButton"></div>
+								</div>
+								<div class="task">
+									<div class="tasksBox">
+										<div class="topTasks">
+											<div class="tasksTitulo">
+												Titulo
+											</div>
+
+											<div class="button_more">
+												<div class="dropdown">
+													<button class="dropbtn">
+														<img
+															src="/assets/more_vert_light.svg"
+														/>
+													</button>
+
+													<div
+														class="dropdown-content"
+													>
+														<button>
+															<div
+																class="deleteIcon"
+															></div>
+															<div
+																class="excluir"
+															>
+																Excluir
+															</div>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="bottomTasks">
+											<div class="collapsibleOut">
+												<button
+													type="button"
+													class="collapsible"
+												>
+													Descrição
 												</button>
+												<div
+													class="contentDescricao"
+													style="display: none"
+												>
+													<p>Descrição Aqui</p>
+												</div>
+											</div>
+
+											<div class="tasksAction">
+												<div class="next"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-
-								<div class="bottomTasks">
-									<div class="collapsibleOut">
-										<button type="button" class="collapsible">
-										Descrição 
-										</button>
-										<div class="contentDescricao" style="display: none;">
-											<p>Descrição Aqui</p>
-										</div>
-									</div>
-									
-
-									<div class="tasksAction">
-										<div class="next"></div>
-									</div>
-								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="secoes">
-						<div class="topo">
-							<h5>Em andamento</h5>
-						</div>
-						<div class="task">
-							<div class="tasksBox">
-								<div class="topTasks">
-									<div class="tasksTitulo">Titulo</div>
+							<div class="secoes">
+								<div class="topo">
+									<h5>Em andamento</h5>
+								</div>
+								<div class="task">
+									<div class="tasksBox">
+										<div class="topTasks">
+											<div class="tasksTitulo">
+												Titulo
+											</div>
 
-									<div class="button_more">
-										<div class="dropdown">
-											<button class="dropbtn">
-												<img src="/assets/more_vert_light.svg">
-											</button>
-											
-											<div class="dropdown-content">
-												<button>
-													<div class="deleteIcon"></div>
-													<div class="excluir">Excluir</div>
+											<div class="button_more">
+												<div class="dropdown">
+													<button class="dropbtn">
+														<img
+															src="/assets/more_vert_light.svg"
+														/>
+													</button>
+
+													<div
+														class="dropdown-content"
+													>
+														<button>
+															<div
+																class="deleteIcon"
+															></div>
+															<div
+																class="excluir"
+															>
+																Excluir
+															</div>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="bottomTasks">
+											<div class="collapsibleOut">
+												<button
+													type="button"
+													class="collapsible"
+												>
+													Descrição
 												</button>
+												<div
+													class="contentDescricao"
+													style="display: none"
+												>
+													<p>Descrição Aqui</p>
+												</div>
+											</div>
+
+											<div class="tasksAction">
+												<div class="before"></div>
+												<div class="next"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-
-								<div class="bottomTasks">
-									<div class="collapsibleOut">
-										<button type="button" class="collapsible">
-										Descrição 
-										</button>
-										<div class="contentDescricao" style="display: none;">
-											<p>Descrição Aqui</p>
-										</div>
-									</div>
-									
-
-									<div class="tasksAction">
-										<div class="before"></div>
-										<div class="next"></div>
-									</div>
-								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="secoes">
-						<div class="topo">
-							<h5>Feito</h5>
-						</div>
-						<div class="task">
-							<div class="tasksBox">
-								<div class="topTasks">
-									<div class="tasksTitulo"><s>Titulo</s></div>
+							<div class="secoes">
+								<div class="topo">
+									<h5>Feito</h5>
+								</div>
+								<div class="task">
+									<div class="tasksBox">
+										<div class="topTasks">
+											<div class="tasksTitulo">
+												<s>Titulo</s>
+											</div>
 
-									<div class="button_more">
-										<div class="dropdown">
-											<button class="dropbtn">
-												<img src="/assets/more_vert_light.svg">
-											</button>
-											
-											<div class="dropdown-content">
-												<button>
-													<div class="deleteIcon"></div>
-													<div class="excluir">Excluir</div>
+											<div class="button_more">
+												<div class="dropdown">
+													<button class="dropbtn">
+														<img
+															src="/assets/more_vert_light.svg"
+														/>
+													</button>
+
+													<div
+														class="dropdown-content"
+													>
+														<button>
+															<div
+																class="deleteIcon"
+															></div>
+															<div
+																class="excluir"
+															>
+																Excluir
+															</div>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="bottomTasks">
+											<div class="collapsibleOut">
+												<button
+													type="button"
+													class="collapsible"
+												>
+													Descrição
 												</button>
+												<div
+													class="contentDescricao"
+													style="display: none"
+												>
+													<p>Descrição Aqui</p>
+												</div>
+											</div>
+
+											<div class="tasksAction">
+												<div class="before"></div>
+												<div class="replay"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="bottomTasks">
-									<div class="collapsibleOut">
-										<button type="button" class="collapsible">
-										Descrição 
-										</button>
-										<div class="contentDescricao" style="display: none;">
-											<p>Descrição Aqui</p>
-										</div>
-									</div>
-									
-
-									<div class="tasksAction">
-										<div class="before"></div>
-										<div class="replay"></div>
-									</div>
-								</div>
 							</div>
 						</div>
+
+						<div class="balls"></div>
 					</div>
-					
-				</section>
+				</div>
 
 				<div class="modalBack" id="modal-add">
 					<div class="modalContainer">
@@ -253,15 +312,27 @@
 							<form class="form" id="form">
 								<div class="form-control">
 									<label for="formTitulo">Titulo*</label>
-									<input type="text" class="inputTitulo error" id="formTitulo">
+									<input
+										type="text"
+										class="inputTitulo error"
+										id="formTitulo"
+									/>
 
-									<i><img class="img-error" src="/assets/error-icon.svg" alt=""></i>
+									<i
+										><img
+											class="img-error"
+											src="/assets/error-icon.svg"
+											alt=""
+									/></i>
 									<small>Preencha esse campo</small>
 								</div>
 
 								<div class="form-control">
 									<label for="formDescricao">Descrição</label>
-									<textarea name="formDescricao" id="formDescricao"></textarea>
+									<textarea
+										name="formDescricao"
+										id="formDescricao"
+									></textarea>
 								</div>
 
 								<button>Criar Task</button>
@@ -269,7 +340,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</main>
 
@@ -283,6 +353,8 @@
 		</footer>
 
 		<script src="/modal.js"></script>
-		<script src="validacao.js"></script>
+		<script src="/validacao.js"></script>
+		<script src="/carrossel.js"></script>
+		<script src="/consumoApi.js"></script>
 	</body>
 </html>

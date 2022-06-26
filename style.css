@@ -9,19 +9,50 @@
 	box-sizing: border-box;
 }
 
+.material-icons {
+	user-select: none;
+}
+
 html {
 	height: 100%;
 	width: 100%;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	position: absolute;
+
+	/* variaveis de cor */
+	--bg: #fafafa;
+
+	--header: #226ed8;
+	--content-header: #f1f3f4;
+
+	--frase-dodia: #ffd569;
+	--bollfrase-interno: #fff5c0;
+	--bollfrase-externo: #fffcee;
+	--tips: #fbb910;
+	--frasedodia-big: #ffffff;
+	--text: #141414;
+	--blue-modal: #3867d6;
+
+	--balls: #c4c4c4;
+	--botoes: #ffffff;
+	--input: #eeeeee;
+	--tasks-text: #000000;
+	--task: #eeeeee;
+	--tasks: #ffffff;
+	--descricao: #002d6c;
+	--navigate: #ffffff;
+	--red: #df0000;
+	--dropdown: #ffffff;
+
+	--footer: #226ed8;
 }
 
 body {
 	height: 100%;
 
 	font-family: 'Poppins', sans-serif;
-	background: #fafafa;
+	background: var(--bg);
 	font-size: 1.6rem;
 
 	min-width: 30rem;
@@ -29,7 +60,7 @@ body {
 
 /* NAVEGATION ==================== */
 header {
-	background: #226ed8;
+	background: var(--header);
 	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.3);
 
 	width: 100%;
@@ -55,7 +86,7 @@ header h1 {
 	font-size: 3rem;
 	line-height: 4.5rem;
 
-	color: #fafafa;
+	color: var(--content-header);
 }
 
 /* Switch button */
@@ -75,12 +106,7 @@ header h1 {
 
 	height: 2.8rem;
 	border-radius: 2.4rem;
-	background: linear-gradient(
-		269.72deg,
-		#222222 0.23%,
-		#111111 0.24%,
-		#2e2e2e 99.76%
-	);
+	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	transition: background-color 0.3s ease-in;
 }
@@ -91,27 +117,33 @@ header h1 {
 	height: 2.2rem;
 
 	background: #ffffff;
-	background-image: url(/assets/dark_mode.svg);
+	background-image: url(/assets/light_mode.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
 
-	right: 0.4rem;
+	right: 2.9rem;
 	border-radius: 2.4rem;
 
 	transition: all 0.3s ease-in 0s;
 }
+
 .onoffswitch-checkbox:checked + .onoffswitch-label {
-	background: linear-gradient(90deg, #ffc93f 0%, #ffc93f 0.01%, #ffe03f 100%);
+	background: linear-gradient(
+		269.72deg,
+		#222222 0.23%,
+		#111111 0.24%,
+		#2e2e2e 99.76%
+	);
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-	right: 2.9rem;
+	right: 0.4rem;
 	width: 2.2rem;
 	height: 2.2rem;
 
 	background: #ffffff;
-	background-image: url(/assets/light_mode.svg);
+	background-image: url(/assets/dark_mode.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
@@ -136,7 +168,7 @@ main .container {
 
 /* Frase do dia */
 .containerFraseDoDia {
-	background: #ffd569;
+	background: var(--frase-dodia);
 	box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.04);
 	border-radius: 2rem;
 
@@ -153,15 +185,20 @@ main .container {
 	height: 3.2rem;
 	border-radius: 3.2rem;
 
-	background: #fff5c0;
-	box-shadow: 0 0 0 5px #fffcee;
-	background-image: url(/assets/tips_and_updates_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	background: var(--bollfrase-interno);
+	box-shadow: 0 0 0 5px var(--bollfrase-externo);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#tips_and_updates {
+	color: var(--tips);
 }
 
 .content {
 	margin-left: 1.5rem;
+	color: var(--text);
 }
 
 .tituloFrase {
@@ -179,7 +216,7 @@ main .container {
 
 @media (min-width: 777px) {
 	.containerFraseDoDia {
-		background: #ffffff;
+		background: var(--frasedodia-big);
 		display: flex;
 		align-items: flex-start;
 
@@ -188,7 +225,7 @@ main .container {
 	}
 
 	.tituloFrase {
-		color: #141414;
+		color: var(--text);
 		text-shadow: none;
 	}
 
@@ -255,7 +292,7 @@ main .container {
 }
 
 .modalContainer {
-	background: #ffffff;
+	background: var(--frasedodia-big);
 	box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.25);
 	border-radius: 2rem;
 
@@ -278,37 +315,32 @@ main .container {
 	align-items: center;
 }
 
-.modalBollFrase {
-	width: 3.2rem;
-	height: 3.2rem;
-	border-radius: 3.2rem;
-
-	background: #fff5c0;
-	box-shadow: 0 0 0 5px #fffcee;
-	background-image: url(/assets/tips_and_updates_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 .modalTituloFrase {
 	font-weight: 700;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
 
 	margin-left: 1rem;
+	color: var(--text);
 }
 
 .close {
-	border: 0.2rem solid #226ed8;
+	border: 0.2rem solid var(--blue-modal);
+	background: none;
 	width: 3rem;
 	height: 3rem;
 	border-radius: 3rem;
 
-	background-image: url(/assets/close_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	cursor: pointer;
+}
+
+#close {
+	font-size: 1.6rem;
+	color: var(--blue-modal);
 }
 
 .modalFrase {
@@ -316,7 +348,7 @@ main .container {
 	font-size: 1.6rem;
 	line-height: 2.1rem;
 
-	color: #141414;
+	color: var(--text);
 }
 
 /* Tasks */
@@ -348,7 +380,7 @@ main .container {
 	font-weight: 400;
 	font-size: 2rem;
 	line-height: 3rem;
-	color: #141414;
+	color: var(--text);
 }
 
 #atual {
@@ -367,14 +399,16 @@ main .container {
 	transform: scale(1.5);
 }
 
-#before {
+#beforeB {
 	top: 60%;
 	left: 0;
+	color: var(--blue-modalF);
 }
 
-#next {
+#nextB {
 	top: 60%;
 	right: 0;
+	color: var(--blue-modalF);
 }
 
 .balls {
@@ -387,20 +421,16 @@ main .container {
 
 .balls div {
 	transition: all 0.5s;
-	background: #c4c4c4;
+	background: var(--balls);
 	padding: 0.6rem;
 	margin: 0.7rem;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
-.balls div:hover {
-	border: 0.1rem solid #226ed8;
-}
-
 .divAtual {
 	transition: all 0.5s !important;
-	background: #226ed8 !important;
+	background: var(--blue-modal) !important;
 }
 
 .secoes {
@@ -415,25 +445,30 @@ main .container {
 }
 
 .addButton {
-	border: 0.2rem solid #226ed8;
+	border: 0.2rem solid var(--blue-modal);
 	width: 3rem;
 	height: 3rem;
 	border-radius: 3rem;
 
-	background-image: url(/assets/add_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	cursor: pointer;
+}
+
+#add {
+	font-size: 1.6rem;
+	color: var(--blue-modal);
 }
 
 .navigate_next {
 	width: 3rem;
 	height: 3rem;
 
-	background-image: url(/assets/navigate_next_carrossel.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	cursor: pointer;
 }
@@ -442,9 +477,9 @@ main .container {
 	width: 3rem;
 	height: 3rem;
 
-	background-image: url(/assets/navigate_before_carrossel.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	cursor: pointer;
 }
@@ -455,7 +490,7 @@ main .container {
 	padding-inline: 1.5rem;
 	padding-bottom: 1.5rem;
 
-	background: #eeeeee;
+	background: var(--task);
 	border-radius: 1rem;
 
 	overflow-y: scroll;
@@ -466,7 +501,7 @@ main .container {
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: #c4c4c4;
+	background-color: var(--balls);
 	border-radius: 10px;
 }
 
@@ -485,13 +520,13 @@ main .container {
 	font-weight: 600;
 	font-size: 2rem;
 	line-height: 3rem;
-	color: #226ed8;
+	color: var(--blue-modal);
 }
 
 .modalAddTopo .linha {
 	height: 0.3rem;
 	width: 12.1rem;
-	background: #226ed8;
+	background: var(--blue-modal);
 	border-radius: 1rem;
 }
 
@@ -511,12 +546,13 @@ main .container {
 	font-size: 1.4rem;
 	line-height: 2.1rem;
 	margin-top: 2rem;
+	color: var(--text);
 }
 
 .modalAdd input {
 	height: 4rem;
 	padding: 1rem;
-	background: #eeeeee;
+	background: var(--input);
 	border-radius: 10px;
 	border: none;
 	outline: none;
@@ -552,7 +588,7 @@ main .container {
 .modalAdd textarea {
 	height: 8rem;
 	padding: 1rem;
-	background: #eeeeee;
+	background: var(--input);
 	border-radius: 10px;
 	border: 0 none;
 
@@ -564,7 +600,7 @@ main .container {
 	padding: 1.5rem;
 	width: 100%;
 
-	background: #226ed8;
+	background: linear-gradient(90.35deg, #4890f5 0%, #226ed8 99.7%);
 
 	color: #ffffff;
 	font-weight: 500;
@@ -583,7 +619,7 @@ main .container {
 	margin-top: 1.5rem;
 	padding: 1.3rem;
 
-	background: #ffffff;
+	background: var(--tasks);
 	border-radius: 1rem;
 
 	display: flex;
@@ -596,11 +632,10 @@ main .container {
 	font-weight: 600;
 	font-size: 1.6rem;
 	line-height: 2.1rem;
-	color: #141414;
+	color: var(--text);
 }
 
 .collapsible {
-	color: #141414;
 	background: none;
 
 	padding-right: 1rem;
@@ -610,10 +645,6 @@ main .container {
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
-
-	background-image: url(/assets/expand_more_light.svg);
-	background-repeat: no-repeat;
-	background-position: 6.5rem center;
 
 	text-align: left;
 
@@ -621,7 +652,6 @@ main .container {
 }
 
 .collapsible.active {
-	color: #002d6c;
 	background: none;
 
 	padding-right: 1rem;
@@ -632,13 +662,31 @@ main .container {
 	font-size: 1.4rem;
 	line-height: 1.8rem;
 
-	background-image: url(/assets/expand_less_light.svg);
-	background-repeat: no-repeat;
-	background-position: 6.5rem center;
-
 	text-align: left;
 
 	cursor: pointer;
+}
+
+.collapsible::before {
+	content: 'Ler descrição';
+	color: var(--text);
+}
+
+.collapsible.active::before {
+	content: 'Esconder descrição';
+	color: var(--descricao);
+}
+
+.collapsible span::before {
+	content: 'expand_more';
+	color: var(--text);
+	font-size: 1.6rem;
+}
+
+.collapsible.active span::before {
+	content: 'expand_less';
+	color: var(--descricao);
+	font-size: 1.6rem;
 }
 
 .contentDescricao {
@@ -648,7 +696,7 @@ main .container {
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
-	color: #000000;
+	color: var(--text);
 }
 
 .collapsibleOut {
@@ -668,65 +716,93 @@ main .container {
 }
 
 .next {
-	/* border: 0.2rem solid #226ed8; */
-	background: #226ed8;
+	background: var(--blue-modal);
 	width: 2rem;
 	height: 2rem;
 	border-radius: 2rem;
 
-	background-image: url(/assets/navigate_next_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	cursor: pointer;
 }
 
+.navigate_next #navigate_next {
+	font-size: 3rem;
+	color: var(--blue-modal);
+}
+
+#navigate_next {
+	font-size: 1.6rem;
+	color: var(--navigate);
+}
+
 .before {
-	border: 0.15rem solid #226ed8;
-	/* background: #226ed8; */
+	border: 0.15rem solid var(--blue-modal);
 	width: 2rem;
 	height: 2rem;
 	border-radius: 2rem;
 
-	background-image: url(/assets/navigate_before_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	margin-inline: 0.5rem;
 
 	cursor: pointer;
 }
 
+.navigate_before #navigate_before {
+	font-size: 3rem;
+	color: var(--blue-modal);
+}
+
+#navigate_before {
+	font-size: 1.6rem;
+	color: var(--blue-modal);
+}
+
 .replay {
 	/* border: 0.2rem solid #226ed8; */
-	background: #226ed8;
+	background: var(--blue-modal);
 	width: 2rem;
 	height: 2rem;
 	border-radius: 2rem;
 
-	background-image: url(/assets/replay_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	padding: 0.5rem;
 
 	cursor: pointer;
 }
 
+#replay {
+	font-size: 1.6rem;
+	color: #ffffff;
+}
+
 .deleteIcon {
 	width: 1.6rem;
 	height: 1.6rem;
 
-	background-image: url(/assets/delete_outline_light.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#delete_outline {
+	color: var(--red);
+	font-size: 1.6rem;
 }
 
 .excluir {
 	font-weight: 400;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
-	color: #df0000;
+	color: var(--red);
 	margin-left: 0.2rem;
 }
 
@@ -747,6 +823,11 @@ main .container {
 	background-color: inherit;
 }
 
+#more_vert {
+	color: var(--text);
+	font-size: 1.6rem;
+}
+
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -758,7 +839,7 @@ main .container {
 .dropdown-content button {
 	display: flex;
 	align-items: center;
-	background-color: #ffffff;
+	background-color: var(--dropdown);
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 0.4rem;
 	border: none;
@@ -773,7 +854,7 @@ main .container {
 
 /* Roda pé */
 footer {
-	background-color: #226ed8;
+	background-color: var(--footer);
 	height: 5rem;
 	width: 100%;
 
@@ -801,4 +882,20 @@ footer .container {
 
 footer .container div {
 	padding-right: 1.6rem;
+}
+
+#favorite {
+	font-size: 1.6rem;
+	color: #ffafaf;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.footerName {
+	display: flex;
+	align-items: center;
+}
+
+.footerName b {
+	margin-left: 0.5rem;
 }

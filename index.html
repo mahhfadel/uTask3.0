@@ -30,9 +30,15 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- icones -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
 	</head>
 
-	<body id="window">
+	<body>
 		<!-- header -->
 		<header>
 			<div class="container">
@@ -55,8 +61,6 @@
 						name="onoffswitch"
 						class="onoffswitch-checkbox"
 						id="myonoffswitch"
-						tabindex="0"
-						checked
 					/>
 					<label
 						class="onoffswitch-label"
@@ -70,7 +74,11 @@
 			<div class="container">
 				<!-- Frase do dia -->
 				<div class="containerFraseDoDia">
-					<div class="bollFrase"></div>
+					<div class="bollFrase">
+						<span class="material-icons" id="tips_and_updates"
+							>tips_and_updates</span
+						>
+					</div>
 
 					<div class="content">
 						<div class="tituloFrase">Frase do dia</div>
@@ -84,11 +92,19 @@
 					<div class="modalContainer">
 						<div class="modalFraseTopo">
 							<div>
-								<div class="modalBollFrase"></div>
+								<div class="bollFrase">
+									<span
+										class="material-icons"
+										id="tips_and_updates"
+										>tips_and_updates</span
+									>
+								</div>
 								<div class="modalTituloFrase">Frase do dia</div>
 							</div>
 
-							<div class="close"></div>
+							<div class="close">
+								<p class="material-icons" id="close">close</p>
+							</div>
 						</div>
 
 						<div class="modalFrase">
@@ -101,18 +117,34 @@
 				<div class="viewSlide">
 					<div class="slide">
 						<div class="slides">
-							<div id="before" class="btn">
-								<div class="navigate_before"></div>
+							<div id="beforeB" class="btn">
+								<div class="navigate_before">
+									<span
+										class="material-icons"
+										id="navigate_before"
+										>navigate_before</span
+									>
+								</div>
 							</div>
-							<div id="next" class="btn">
-								<div class="navigate_next"></div>
+							<div id="nextB" class="btn">
+								<div class="navigate_next">
+									<span
+										class="material-icons"
+										id="navigate_next"
+										>navigate_next</span
+									>
+								</div>
 							</div>
 
 							<!-- SECOES -------------------------------------- -->
 							<div id="atual" class="secoes">
 								<div class="topo">
 									<h5>A fazer</h5>
-									<div class="addButton"></div>
+									<div class="addButton">
+										<span class="material-icons" id="add"
+											>add</span
+										>
+									</div>
 								</div>
 								<div class="task">
 									<div class="tasksBox">
@@ -124,9 +156,11 @@
 											<div class="button_more">
 												<div class="dropdown">
 													<button class="dropbtn">
-														<img
-															src="/assets/more_vert_light.svg"
-														/>
+														<span
+															class="material-icons"
+															id="more_vert"
+															>more_vert</span
+														>
 													</button>
 
 													<div
@@ -135,7 +169,13 @@
 														<button>
 															<div
 																class="deleteIcon"
-															></div>
+															>
+																<span
+																	class="material-icons"
+																	id="delete_outline"
+																	>delete_outline</span
+																>
+															</div>
 															<div
 																class="excluir"
 															>
@@ -153,7 +193,10 @@
 													type="button"
 													class="collapsible"
 												>
-													Descrição
+													<span
+														class="material-icons"
+														id="iconDescription"
+													></span>
 												</button>
 												<div
 													class="contentDescricao"
@@ -164,7 +207,13 @@
 											</div>
 
 											<div class="tasksAction">
-												<div class="next"></div>
+												<div class="next">
+													<span
+														class="material-icons"
+														id="navigate_next"
+														>navigate_next</span
+													>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -185,9 +234,11 @@
 											<div class="button_more">
 												<div class="dropdown">
 													<button class="dropbtn">
-														<img
-															src="/assets/more_vert_light.svg"
-														/>
+														<span
+															class="material-icons"
+															id="more_vert"
+															>more_vert</span
+														>
 													</button>
 
 													<div
@@ -196,7 +247,13 @@
 														<button>
 															<div
 																class="deleteIcon"
-															></div>
+															>
+																<span
+																	class="material-icons"
+																	id="delete_outline"
+																	>delete_outline</span
+																>
+															</div>
 															<div
 																class="excluir"
 															>
@@ -214,7 +271,10 @@
 													type="button"
 													class="collapsible"
 												>
-													Descrição
+													<span
+														class="material-icons"
+														id="iconDescription"
+													></span>
 												</button>
 												<div
 													class="contentDescricao"
@@ -225,8 +285,20 @@
 											</div>
 
 											<div class="tasksAction">
-												<div class="before"></div>
-												<div class="next"></div>
+												<div class="before">
+													<span
+														class="material-icons"
+														id="navigate_before"
+														>navigate_before</span
+													>
+												</div>
+												<div class="next">
+													<span
+														class="material-icons"
+														id="navigate_next"
+														>navigate_next</span
+													>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -247,9 +319,11 @@
 											<div class="button_more">
 												<div class="dropdown">
 													<button class="dropbtn">
-														<img
-															src="/assets/more_vert_light.svg"
-														/>
+														<span
+															class="material-icons"
+															id="more_vert"
+															>more_vert</span
+														>
 													</button>
 
 													<div
@@ -258,7 +332,13 @@
 														<button>
 															<div
 																class="deleteIcon"
-															></div>
+															>
+																<span
+																	class="material-icons"
+																	id="delete_outline"
+																	>delete_outline</span
+																>
+															</div>
 															<div
 																class="excluir"
 															>
@@ -275,7 +355,10 @@
 													type="button"
 													class="collapsible"
 												>
-													Descrição
+													<span
+														class="material-icons"
+														id="iconDescription"
+													></span>
 												</button>
 												<div
 													class="contentDescricao"
@@ -286,8 +369,20 @@
 											</div>
 
 											<div class="tasksAction">
-												<div class="before"></div>
-												<div class="replay"></div>
+												<div class="before">
+													<span
+														class="material-icons"
+														id="navigate_before"
+														>navigate_before</span
+													>
+												</div>
+												<div class="replay">
+													<span
+														class="material-icons"
+														id="replay"
+														>replay</span
+													>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -307,7 +402,9 @@
 								<div class="linha"></div>
 							</div>
 
-							<div class="close"></div>
+							<div class="close">
+								<p class="material-icons" id="close">close</p>
+							</div>
 
 							<form class="form" id="form">
 								<div class="form-control">
@@ -348,7 +445,11 @@
 			<div class="container">
 				<div>© Processo de Trainee <b>Unect Jr.</b> 2022.1</div>
 
-				<div>Feito com 🤍 por <b>Maria Clara Fadel</b></div>
+				<div class="footerName">
+					Feito com
+					<span class="material-icons" id="favorite">favorite</span>
+					por <b>Maria Clara Fadel</b>
+				</div>
 			</div>
 		</footer>
 
@@ -356,5 +457,6 @@
 		<script src="/validacao.js"></script>
 		<script src="/carrossel.js"></script>
 		<script src="/consumoApi.js"></script>
+		<script src="/darkMode.js"></script>
 	</body>
 </html>

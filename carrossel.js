@@ -2,8 +2,8 @@ let balls = document.querySelector('.balls')
 let quant = document.querySelectorAll('.slides .secoes')
 let atual = 0
 let section = document.getElementById('atual')
-let next = document.getElementById('next')
-let before = document.getElementById('before')
+let next = document.getElementById('nextB')
+let before = document.getElementById('beforeB')
 
 for (let i = 0; i < quant.length; i++) {
 	let div = document.createElement('div')

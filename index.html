@@ -146,247 +146,27 @@
 										>
 									</div>
 								</div>
-								<div class="task">
-									<div class="tasksBox">
-										<div class="topTasks">
-											<div class="tasksTitulo">
-												Titulo
-											</div>
-
-											<div class="button_more">
-												<div class="dropdown">
-													<button class="dropbtn">
-														<span
-															class="material-icons"
-															id="more_vert"
-															>more_vert</span
-														>
-													</button>
-
-													<div
-														class="dropdown-content"
-													>
-														<button>
-															<div
-																class="deleteIcon"
-															>
-																<span
-																	class="material-icons"
-																	id="delete_outline"
-																	>delete_outline</span
-																>
-															</div>
-															<div
-																class="excluir"
-															>
-																Excluir
-															</div>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="bottomTasks">
-											<div class="collapsibleOut">
-												<button
-													type="button"
-													class="collapsible"
-												>
-													<span
-														class="material-icons"
-														id="iconDescription"
-													></span>
-												</button>
-												<div
-													class="contentDescricao"
-													style="display: none"
-												>
-													<p>Descrição Aqui</p>
-												</div>
-											</div>
-
-											<div class="tasksAction">
-												<div class="next">
-													<span
-														class="material-icons"
-														id="navigate_next"
-														>navigate_next</span
-													>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<ul class="task"  id="a-fazer">
+									
+								</ul>
 							</div>
 
 							<div class="secoes">
 								<div class="topo">
 									<h5>Em andamento</h5>
 								</div>
-								<div class="task">
-									<div class="tasksBox">
-										<div class="topTasks">
-											<div class="tasksTitulo">
-												Titulo
-											</div>
-
-											<div class="button_more">
-												<div class="dropdown">
-													<button class="dropbtn">
-														<span
-															class="material-icons"
-															id="more_vert"
-															>more_vert</span
-														>
-													</button>
-
-													<div
-														class="dropdown-content"
-													>
-														<button>
-															<div
-																class="deleteIcon"
-															>
-																<span
-																	class="material-icons"
-																	id="delete_outline"
-																	>delete_outline</span
-																>
-															</div>
-															<div
-																class="excluir"
-															>
-																Excluir
-															</div>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="bottomTasks">
-											<div class="collapsibleOut">
-												<button
-													type="button"
-													class="collapsible"
-												>
-													<span
-														class="material-icons"
-														id="iconDescription"
-													></span>
-												</button>
-												<div
-													class="contentDescricao"
-													style="display: none"
-												>
-													<p>Descrição Aqui</p>
-												</div>
-											</div>
-
-											<div class="tasksAction">
-												<div class="before">
-													<span
-														class="material-icons"
-														id="navigate_before"
-														>navigate_before</span
-													>
-												</div>
-												<div class="next">
-													<span
-														class="material-icons"
-														id="navigate_next"
-														>navigate_next</span
-													>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<ul class="task" id="em-andamento">
+									
+								</ul>
 							</div>
 
 							<div class="secoes">
 								<div class="topo">
 									<h5>Feito</h5>
 								</div>
-								<div class="task">
-									<div class="tasksBox">
-										<div class="topTasks">
-											<div class="tasksTitulo">
-												<s>Titulo</s>
-											</div>
-
-											<div class="button_more">
-												<div class="dropdown">
-													<button class="dropbtn">
-														<span
-															class="material-icons"
-															id="more_vert"
-															>more_vert</span
-														>
-													</button>
-
-													<div
-														class="dropdown-content"
-													>
-														<button>
-															<div
-																class="deleteIcon"
-															>
-																<span
-																	class="material-icons"
-																	id="delete_outline"
-																	>delete_outline</span
-																>
-															</div>
-															<div
-																class="excluir"
-															>
-																Excluir
-															</div>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="bottomTasks">
-											<div class="collapsibleOut">
-												<button
-													type="button"
-													class="collapsible"
-												>
-													<span
-														class="material-icons"
-														id="iconDescription"
-													></span>
-												</button>
-												<div
-													class="contentDescricao"
-													style="display: none"
-												>
-													<p>Descrição Aqui</p>
-												</div>
-											</div>
-
-											<div class="tasksAction">
-												<div class="before">
-													<span
-														class="material-icons"
-														id="navigate_before"
-														>navigate_before</span
-													>
-												</div>
-												<div class="replay">
-													<span
-														class="material-icons"
-														id="replay"
-														>replay</span
-													>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<ul class="task" id="ul-feito">
+									
+								</ul
 							</div>
 						</div>
 
@@ -432,7 +212,7 @@
 									></textarea>
 								</div>
 
-								<button>Criar Task</button>
+								<button type="submit" id="add-task">Criar Task</button>
 							</form>
 						</div>
 					</div>
@@ -458,5 +238,6 @@
 		<script src="/carrossel.js"></script>
 		<script src="/consumoApi.js"></script>
 		<script src="/darkMode.js"></script>
+		<script src="/tasks.js"></script>
 	</body>
 </html>

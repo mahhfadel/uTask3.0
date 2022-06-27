@@ -630,13 +630,6 @@ ul {
 	position: relative;
 }
 
-.tasksTitulo {
-	font-weight: 600;
-	font-size: 1.6rem;
-	line-height: 2.1rem;
-	color: var(--text);
-}
-
 .collapsible {
 	background: none;
 
@@ -701,6 +694,10 @@ ul {
 	color: var(--text);
 
 	display: none;
+}
+
+.contentDescricao p {
+	word-break: break-all;
 }
 
 .collapsibleOut {
@@ -834,7 +831,11 @@ ul {
 }
 
 .topTasks p {
+	font-weight: 600;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
 	color: var(--text);
+	word-break: break-all;
 }
 
 #ul-feito p {

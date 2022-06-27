@@ -77,6 +77,16 @@ window.addEventListener('load', () => {
 			buttoncollapsible.classList.add('collapsible')
 			collapsibleOut.appendChild(buttoncollapsible)
 
+			buttoncollapsible.addEventListener('click', function () {
+				this.classList.toggle('active')
+				let content = this.nextElementSibling
+				if (content.style.display === 'block') {
+					content.style.display = 'none'
+				} else {
+					content.style.display = 'block'
+				}
+			})
+
 			const materialIconDescription = document.createElement('span')
 			materialIconDescription.classList.add('material-icons')
 			materialIconDescription.id = 'iconDescription'

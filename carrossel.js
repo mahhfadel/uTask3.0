@@ -1,5 +1,5 @@
 let balls = document.querySelector('.balls')
-let quant = document.querySelectorAll('.slides .secoes')
+let quant = document.querySelectorAll('.slide .secoes')
 let atual = 0
 let section = document.getElementById('atual')
 let next = document.getElementById('nextB')
@@ -33,8 +33,7 @@ next.addEventListener('click', () => {
 
 function slide() {
 	let w = window.innerWidth
-	w = w + 5
-
+	w = 0.85 * w
 	if (atual >= quant.length) {
 		atual = 0
 	} else if (atual < 0) {

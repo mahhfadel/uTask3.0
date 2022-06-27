@@ -73,8 +73,8 @@ window.addEventListener('load', () => {
 			liBottomTasks.appendChild(collapsibleOut)
 
 			const buttoncollapsible = document.createElement('button')
-			buttoncollapsible.classList.add('collapsible')
 			buttoncollapsible.type = 'button'
+			buttoncollapsible.classList.add('collapsible')
 			collapsibleOut.appendChild(buttoncollapsible)
 
 			const materialIconDescription = document.createElement('span')

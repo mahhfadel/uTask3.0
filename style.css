@@ -234,14 +234,10 @@ main .container {
 	}
 
 	.slide {
-		padding-bottom: 31.5rem !important;
 		width: 100% !important;
-	}
 
-	.slides {
-		display: flex;
-		gap: 2rem;
-		width: 100% !important;
+		display: flex !important;
+		gap: 2rem !important;
 	}
 
 	.secoes {
@@ -355,28 +351,19 @@ main .container {
 .viewSlide {
 	height: 100%;
 	overflow: hidden;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
 }
 
 .slide {
-	width: 300%;
+	width: 303%;
 	height: 100%;
 	padding-bottom: 30rem;
-	overflow: hidden;
 	transition: all 0.4s;
-}
-
-.slides {
-	height: 100%;
-	width: 100%;
-
-	margin-top: 2.5rem;
-	margin-bottom: 2.5rem;
-
 	display: flex;
-	gap: 0.9rem;
 }
 
-.slides h5 {
+.slide h5 {
 	font-weight: 400;
 	font-size: 2rem;
 	line-height: 3rem;
@@ -385,6 +372,16 @@ main .container {
 
 #atual {
 	transition: all 2s;
+	width: 33%;
+	margin-right: 0.25%;
+}
+
+#sec1 {
+	width: 33%;
+}
+
+#sec2 {
+	width: 33%;
 }
 
 .btn {
@@ -415,7 +412,7 @@ main .container {
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	margin-top: 2.5rem;
+	margin-top: 46%;
 	margin-left: 33.33%;
 }
 

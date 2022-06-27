@@ -13,6 +13,13 @@ fetch(
 			decision(w, corpo, pFrase)
 		}
 	})
+	.catch((error) => {
+		pFrase = document.getElementsByClassName('apiFrase')
+		data =
+			'A sabedoria é um paradoxo. O Homem que mais sabe é aquele que mais reconhece a vastidão da sua ignorância.'
+		pFrase[1].innerHTML = data
+		pFrase[0].innerHTML = data
+	})
 
 function decision(size, body, frase) {
 	if (size > 777) {

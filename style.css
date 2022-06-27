@@ -234,6 +234,7 @@ main .container {
 
 		cursor: default;
 		pointer-events: none;
+		width: 85%;
 	}
 
 	.tituloFrase {

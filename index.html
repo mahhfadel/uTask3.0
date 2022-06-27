@@ -125,60 +125,51 @@
 				<!-- Tasks -->
 				<div class="viewSlide">
 					<div class="slide">
-							<div id="beforeB" class="btn">
-								<div class="navigate_before">
-									<span
-										class="material-icons"
-										id="navigate_before"
-										>navigate_before</span
+						<div id="beforeB" class="btn">
+							<div class="navigate_before">
+								<span
+									class="material-icons"
+									id="navigate_before"
+									>navigate_before</span
+								>
+							</div>
+						</div>
+						<div id="nextB" class="btn">
+							<div class="navigate_next">
+								<span class="material-icons" id="navigate_next"
+									>navigate_next</span
+								>
+							</div>
+						</div>
+
+						<!-- SECOES -------------------------------------- -->
+						<div id="atual" class="secoes">
+							<div class="topo">
+								<h5>A fazer</h5>
+								<div class="addButton">
+									<span class="material-icons" id="add"
+										>add</span
 									>
 								</div>
 							</div>
-							<div id="nextB" class="btn">
-								<div class="navigate_next">
-									<span
-										class="material-icons"
-										id="navigate_next"
-										>navigate_next</span
-									>
-								</div>
-							</div>
+							<ul class="task" id="a-fazer"></ul>
+						</div>
 
-							<!-- SECOES -------------------------------------- -->
-							<div id="atual" class="secoes">
-								<div class="topo">
-									<h5>A fazer</h5>
-									<div class="addButton">
-										<span class="material-icons" id="add"
-											>add</span
-										>
-									</div>
-								</div>
-								<ul class="task"  id="a-fazer">
-									
-								</ul>
+						<div class="secoes" id="sec1">
+							<div class="topo">
+								<h5>Em andamento</h5>
 							</div>
+							<ul class="task" id="em-andamento"></ul>
+						</div>
 
-							<div class="secoes" id="sec1">
-								<div class="topo">
-									<h5>Em andamento</h5>
-								</div>
-								<ul class="task" id="em-andamento">
-									
-								</ul>
+						<div class="secoes" id="sec2">
+							<div class="topo">
+								<h5>Feito</h5>
 							</div>
-
-							<div class="secoes" id="sec2">
-								<div class="topo">
-									<h5>Feito</h5>
-								</div>
-								<ul class="task" id="ul-feito">
-									
-								</ul
-							</div>
-
-						<div class="balls"></div>
+							<ul class="task" id="ul-feito"></ul>
+						</div>
 					</div>
+					<div class="balls"></div>
 				</div>
 
 				<div class="modalBack" id="modal-add">
@@ -219,7 +210,11 @@
 									></textarea>
 								</div>
 
-								<input type="submit" id="add-task" value="Criar task">
+								<input
+									type="submit"
+									id="add-task"
+									value="Criar task"
+								/>
 							</form>
 						</div>
 					</div>

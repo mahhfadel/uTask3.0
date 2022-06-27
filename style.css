@@ -423,9 +423,8 @@ main .container {
 .balls {
 	position: absolute;
 	display: flex;
-	justify-content: center;
-	margin-top: 46%;
 	margin-left: 33.33%;
+	bottom: 6.5rem;
 }
 
 .balls div {

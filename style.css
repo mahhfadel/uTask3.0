@@ -129,7 +129,7 @@ header h1 {
 	height: 2.2rem;
 
 	background: #ffffff;
-	background-image: url(/assets/light_mode.svg);
+	background-image: url(assets/light_mode.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
@@ -155,7 +155,7 @@ header h1 {
 	height: 2.2rem;
 
 	background: #ffffff;
-	background-image: url(/assets/dark_mode.svg);
+	background-image: url(assets/dark_mode.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;

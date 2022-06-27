@@ -1,5 +1,7 @@
 const html = document.querySelector('html')
 const checkbox = document.querySelector('input[name=onoffswitch]')
+const logoAzul = document.getElementById('blue')
+const logoBranca = document.getElementById('white')
 
 const getStyle = (element, style) =>
 	window.getComputedStyle(element).getPropertyValue(style)
@@ -66,6 +68,17 @@ const changeColors = (colors) => {
 	)
 }
 
+const invisibleBranca = () => {
+	logoBranca.classList.add('invisible')
+	logoAzul.classList.remove('invisible')
+}
+
+const invisibleAzul = () => {
+	logoAzul.classList.add('invisible')
+	logoBranca.classList.remove('invisible')
+}
+
 checkbox.addEventListener('change', ({ target }) => {
 	target.checked ? changeColors(darkMode) : changeColors(initialColors)
+	target.checked ? invisibleBranca() : invisibleAzul()
 })

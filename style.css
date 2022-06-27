@@ -560,6 +560,7 @@ ul {
 	border-radius: 10px;
 	border: none;
 	outline: none;
+	color: var(--text);
 }
 
 .form-control.error input {
@@ -597,22 +598,22 @@ ul {
 	border: 0 none;
 
 	outline: none;
+	color: var(--text);
 }
 
-.modalAdd button {
+.modalAdd #add-task {
 	margin-top: 4rem;
-	padding: 1.5rem;
+	padding: 1.2rem;
 	width: 100%;
 
 	background: linear-gradient(90.35deg, #4890f5 0%, #226ed8 99.7%);
 
 	color: #ffffff;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 2.1rem;
 
 	border-radius: 2rem;
-	border: 0 none;
 
 	cursor: pointer;
 }
@@ -833,6 +834,14 @@ ul {
 	align-items: flex-end;
 	justify-content: space-between;
 	width: 100%;
+}
+
+.topTasks p {
+	color: var(--text);
+}
+
+#ul-feito p {
+	text-decoration: line-through;
 }
 
 .dropdown {

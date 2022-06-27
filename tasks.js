@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
 	const form = document.querySelector('form')
-	const input = document.querySelector('input')
-	const textarea = document.querySelector('textarea')
+	const input = document.getElementById('formTitulo')
+	const textarea = document.getElementById('formDescricao')
 	const listaFazer = document.querySelector('#a-fazer')
 	const listaAndamento = document.querySelector('#em-andamento')
 	const listaFeito = document.querySelector('#ul-feito')
@@ -10,7 +10,6 @@ window.addEventListener('load', () => {
 		e.preventDefault()
 
 		if (input.value) {
-			console.log('entrou')
 			const titulo = input.value
 			const descricao = textarea.value
 
@@ -23,7 +22,6 @@ window.addEventListener('load', () => {
 
 			const liTitulo = document.createElement('p')
 			liTitulo.innerHTML = titulo
-			console.log(titulo)
 			liTopTasks.appendChild(liTitulo)
 
 			const liButtonMore = document.createElement('div')
@@ -97,27 +95,139 @@ window.addEventListener('load', () => {
 			tasksAction.classList.add('tasksAction')
 			liBottomTasks.appendChild(tasksAction)
 
-			const buttonLeft = document.createElement('div')
-			// buttonLeft.classList.add('')
-			tasksAction.appendChild(buttonLeft)
+			// ICONES -------------------------------------------------------
+			const materialIconNext = document.createElement('span')
+			materialIconNext.classList.add('material-icons')
+			materialIconNext.id = 'navigate_next'
+			materialIconNext.innerHTML = 'navigate_next'
 
-			const materialIconLeft = document.createElement('span')
-			materialIconLeft.classList.add('material-icons')
-			// materialIconLeft.id = ''
-			// materialIconLeft.innerHTML = ''
-			buttonLeft.appendChild(materialIconLeft)
+			const materialIconBefore = document.createElement('span')
+			materialIconBefore.classList.add('material-icons')
+			materialIconBefore.id = 'navigate_before'
+			materialIconBefore.innerHTML = 'navigate_before'
 
-			const buttonRight = document.createElement('div')
-			buttonRight.classList.add('next')
-			tasksAction.appendChild(buttonRight)
+			const materialIconReplay = document.createElement('span')
+			materialIconReplay.classList.add('material-icons')
+			materialIconReplay.id = 'replay'
+			materialIconReplay.innerHTML = 'replay'
 
-			const materialIconRight = document.createElement('span')
-			materialIconRight.classList.add('material-icons')
-			materialIconRight.id = 'navigate_next'
-			materialIconRight.innerHTML = 'navigate_next'
-			buttonRight.appendChild(materialIconRight)
+			// AÇOES TASKS ---------------------------------------------------
+			const buttonNext = document.createElement('div')
+			buttonNext.classList.add('next')
+			tasksAction.appendChild(buttonNext)
+			buttonNext.appendChild(materialIconNext)
 
 			listaFazer.appendChild(liTaskBox)
+			limpar()
+
+			const buttonNextAndamento = document.createElement('div')
+			buttonNextAndamento.classList.add('next')
+			// buttonNextAndamento.appendChild(materialIconNext)
+
+			const buttonBefore = document.createElement('div')
+			buttonBefore.classList.add('before')
+			// buttonBefore.appendChild(materialIconBefore)
+
+			const buttonBeforeFeito = document.createElement('div')
+			buttonBeforeFeito.classList.add('before')
+			// buttonBeforeFeito.appendChild(materialIconBefore)
+
+			const buttonReplay = document.createElement('div')
+			buttonReplay.classList.add('next')
+			// buttonReplay.appendChild(materialIconReplay)
+
+			// material icons ---------------------------------------------------
+
+			// listaFazer -------------------------------------------------
+			buttonNext.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode
+				item.removeChild(liTaskBox)
+				listaAndamento.appendChild(liTaskBox)
+
+				tasksAction.removeChild(buttonNext)
+
+				tasksAction.appendChild(buttonBefore)
+				buttonBefore.appendChild(materialIconBefore)
+				tasksAction.appendChild(buttonNextAndamento)
+				buttonNextAndamento.appendChild(materialIconNext)
+			})
+			// listaAndamento ---------------------------------------------
+			buttonNextAndamento.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode
+				item.removeChild(liTaskBox)
+				listaFeito.appendChild(liTaskBox)
+
+				tasksAction.removeChild(buttonBefore)
+				tasksAction.removeChild(buttonNextAndamento)
+
+				tasksAction.appendChild(buttonBeforeFeito)
+				buttonBeforeFeito.appendChild(materialIconBefore)
+				tasksAction.appendChild(buttonReplay)
+				buttonReplay.appendChild(materialIconReplay)
+			})
+
+			buttonBefore.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode
+				item.removeChild(liTaskBox)
+				listaFazer.appendChild(liTaskBox)
+
+				tasksAction.removeChild(buttonBefore)
+				tasksAction.removeChild(buttonNextAndamento)
+
+				tasksAction.appendChild(buttonNext)
+				buttonNext.appendChild(materialIconNext)
+			})
+
+			// listaFeito -------------------------------------------------
+			buttonBeforeFeito.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode
+				item.removeChild(liTaskBox)
+				listaAndamento.appendChild(liTaskBox)
+
+				tasksAction.removeChild(buttonBeforeFeito)
+				tasksAction.removeChild(buttonReplay)
+
+				tasksAction.appendChild(buttonBefore)
+				buttonBefore.appendChild(materialIconBefore)
+				tasksAction.appendChild(buttonNextAndamento)
+				buttonNextAndamento.appendChild(materialIconNext)
+			})
+
+			buttonReplay.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode
+				item.removeChild(liTaskBox)
+				listaFazer.appendChild(liTaskBox)
+
+				tasksAction.removeChild(buttonBeforeFeito)
+				tasksAction.removeChild(buttonReplay)
+
+				tasksAction.appendChild(buttonNext)
+				buttonNext.appendChild(materialIconNext)
+			})
+
+			// BOTAO DE DELETE
+			buttonDell.addEventListener('click', (e) => {
+				const item =
+					e.target.parentNode.parentNode.parentNode.parentNode
+						.parentNode.parentNode.parentNode
+				console.log(item)
+				item.removeChild(liTaskBox)
+			})
 		}
 	})
 })
+
+function limpar() {
+	document.getElementById('formTitulo').value = ''
+	document.getElementById('formDescricao').value = ''
+}

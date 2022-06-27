@@ -23,6 +23,7 @@ containerFraseDoDia.addEventListener('click', () =>
 // Adicionar nova task
 function iniciaModalAdd(modalContainerID) {
 	const modalContainer = document.getElementById(modalContainerID)
+	const input = document.getElementById('formTitulo')
 	if (modalContainer) {
 		modalContainer.classList.add('mostrar')
 		modalContainer.addEventListener('click', (e) => {
@@ -32,6 +33,12 @@ function iniciaModalAdd(modalContainerID) {
 				e.target.id === 'close'
 			) {
 				modalContainer.classList.remove('mostrar')
+				succesValidation(input)
+			}
+
+			if (input.value != '' && e.target.id == 'add-task') {
+				modalContainer.classList.remove('mostrar')
+				succesValidation(input)
 			}
 		})
 	}

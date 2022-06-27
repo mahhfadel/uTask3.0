@@ -2,30 +2,29 @@ const form = document.getElementById('form')
 const formTitulo = document.getElementById('formTitulo')
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
+	e.preventDefault()
 
-    checkInputs()
+	checkInputs()
 })
 
 function checkInputs() {
-    const formTituloValue = formTitulo.value.trim()
-    
+	const formTituloValue = formTitulo.value.trim()
 
-    if (formTituloValue === '') {
-        setErrorFor(formTitulo)
-    } else {
-        succesValidation(formTitulo)
-    }
+	if (formTituloValue === '') {
+		setErrorFor(formTitulo)
+	} else {
+		succesValidation(formTitulo)
+	}
 }
 
 function setErrorFor(input) {
-    const formControl = input.parentElement;
+	const formControl = input.parentElement
 
-    formControl.className = 'form-control error'
+	formControl.className = 'form-control error'
 }
 
 function succesValidation(input) {
-    const formControl = input.parentElement;
+	const formControl = input.parentElement
 
-    formControl.className = 'form-control'
+	formControl.className = 'form-control'
 }

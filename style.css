@@ -915,10 +915,13 @@ footer .container {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+}
 
+footer a{
 	font-size: 1.4rem;
 	line-height: 2.1rem;
 	color: #ffffff;
+	text-decoration: none;
 }
 
 footer .container div {
